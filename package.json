@@ -1,0 +1,12 @@
+{
+  "name": "simpleinspiredwebpage",
+  "version": "1.0.0",
+  "description": "A simple inspired web page",
+  "license": "ISC",
+  "author": "deng myaom",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}

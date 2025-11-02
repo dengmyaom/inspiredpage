@@ -1,0 +1,38 @@
+const bars      = document.querySelector('.bars');
+const navLinks  = document.querySelector('.links');
+const links     = document.querySelectorAll('.links li a');
+
+const close     = document.querySelectorAll('.close');
+
+const login     = document.querySelector('.login');
+const signup    = document.querySelector('.signup');
+
+const btnin     = document.getElementById('btnin');
+
+const btnup     = document.getElementById('btnup');
+
+bars.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+})
+
+const hideForms = () => {
+    login.classList.remove('active')
+    signup.classList.remove('active')
+}
+
+btnin.addEventListener('click', (e) => {
+    e.preventDefault()
+    hideForms()
+    login.classList.add('active')
+})
+
+btnup.addEventListener('click', (e) => {
+    e.preventDefault()
+
+    hideForms()
+    signup.classList.add('active')
+})
+
+close.forEach((a,i) => a.addEventListener('click', () => hideForms()))
+
+links.forEach((a) => a.addEventListener('click', () => a.id === "" ? hideForms() : null))
